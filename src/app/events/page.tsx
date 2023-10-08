@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import {Navbar} from "flowbite-react";
+import Image from "next/image";
 
 export default function Page() {
     return <> <h1>Hello Events</h1>
@@ -11,7 +12,7 @@ export default function Page() {
             rounded={true}
         >
             <Navbar.Brand href="https://flowbite.com/">
-                <img
+                <Image
                     src="https://flowbite.com/docs/images/logo.svg"
                     className="mr-3 h-6 sm:h-9"
                     alt="Flowbite Logo"
