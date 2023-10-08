@@ -1,3 +1,5 @@
+import CardFlex from "@/components/cardFlex";
+
 export default function Home() {
     return (
         <div>
@@ -104,7 +106,7 @@ export default function Home() {
                         </div>
 
                         {/*TODO: */}
-                        {/*<CardFlex :large_view="true" />*/}
+                        <CardFlex/>
                     </div>
                 </section>
 
