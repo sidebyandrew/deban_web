@@ -1,23 +1,17 @@
 'use client';
-import * as Popover from '@radix-ui/react-popover';
-import { Button, Flex, Text } from '@radix-ui/themes';
+import { ModeToggle } from '@/components/ModeToggle';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <>
-      <Popover.Root>
-        <Popover.Trigger className={'bg-red-9'}>More info</Popover.Trigger>
-        <Popover.Portal>
-          <Popover.Content className={'bg-red-9 text-green-4'}>
-            Some more info…
-            <Popover.Arrow />
-          </Popover.Content>
-        </Popover.Portal>
-      </Popover.Root>
-      <Flex direction="column" gap="2">
-        <Text>Hello from Radix Themes :)</Text>
-        <Button>Lets go</Button>
-      </Flex>
-    </>
+    <div className="m-1 gap-2 p-2">
+      <Button variant={'destructive'}>Click Me2</Button>
+      <ModeToggle />
+
+      <Button variant="outline" asChild>
+        <Link href="/login">Login</Link>
+      </Button>
+    </div>
   );
 }

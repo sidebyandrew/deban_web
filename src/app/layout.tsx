@@ -1,4 +1,4 @@
-import { Theme, ThemePanel } from '@radix-ui/themes';
+import { ThemeProvider } from '@/components/theme-provider';
 import '@radix-ui/themes/styles.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -18,19 +18,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
-        {/*<TheHeader />*/}
-        <Theme
-          appearance="dark"
-          accentColor="pink"
-          grayColor="sand"
-          radius="large"
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
           {children}
-          <ThemePanel />
-        </Theme>
-        {/*<TheFooter />*/}
+        </ThemeProvider>
       </body>
     </html>
   );
