@@ -12,7 +12,7 @@ export const conferences = [
     host: {
       id: 1,
       name: 'Cypherpunk DAO',
-      logo: '/img/logos/bitcoin-btc-logo.png',
+      logo: '/img/logo/bitcoin-btc-logo.png',
       website: 'www.cd.com',
       verified: true,
     },
@@ -32,7 +32,7 @@ export const conferences = [
     host: {
       id: 1,
       name: 'A3DAO',
-      logo: '/img/logos/agentx-sky-logo.svg',
+      logo: '/img/logo/agentx-sky-logo.svg',
       website: 'www.a3dao.xyz',
       verified: false,
     },
@@ -52,7 +52,7 @@ export const conferences = [
     host: {
       id: 1,
       name: 'Newmetric DAO',
-      logo: '/img/logos/gitcoin-gtc-logo.svg',
+      logo: '/img/logo/gitcoin-gtc-logo.svg',
       website: 'www.newmetric.xyz',
       verified: false,
     },
@@ -72,7 +72,7 @@ export const conferences = [
     host: {
       id: 1,
       name: 'Hashkey Group',
-      logo: '/img/logos/wechat-logo.png',
+      logo: '/img/logo/wechat-logo.png',
       website: 'www.hk.xyz',
       verified: true,
     },
@@ -92,7 +92,7 @@ export const conferences = [
     host: {
       id: 1,
       name: 'HKGHH',
-      logo: '/img/logos/infura-bg.png',
+      logo: '/img/logo/infura-bg.png',
       website: 'www.HKGHH.xyz',
       verified: true,
     },

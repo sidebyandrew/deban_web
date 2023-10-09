@@ -2,18 +2,18 @@ import Image from 'next/image';
 
 export default function TheHeader() {
   return (
-    <header className="border-gray-200 bg-white dark:border-gray-600 sticky top-0 z-40 mx-auto w-full flex-none border-b">
-      <nav className="border-gray-200 bg-white dark:bg-gray-800 px-4 py-2 lg:px-6">
+    <header className="sticky top-0 z-40 mx-auto w-full flex-none border-b border-gray-200 bg-white dark:border-gray-600">
+      <nav className="border-gray-200 bg-white px-4 py-2 dark:bg-gray-800 lg:px-6">
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
           <a href="/" className="flex items-center">
             <Image
-              src="https://flowbite.com/docs/images/logo.svg"
+              src="/img/logos/Chronicle-logo.svg"
               className="mr-3 h-6 sm:h-9"
-              alt="Flowbite Logo"
+              alt=" Logo"
               width="36"
               height="36"
             />
-            <span className="text-xl font-semibold dark:text-white self-center whitespace-nowrap">
+            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
               SideBy
             </span>
           </a>
@@ -21,7 +21,7 @@ export default function TheHeader() {
           <div className="flex items-center lg:order-2">
             <a
               href="#"
-              className="rounded-lg text-sm text-gray-800 hover:bg-gray-50 focus:ring-gray-300 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800 mr-2 px-4 py-2 font-medium focus:outline-none focus:ring-4 lg:px-5 lg:py-2.5"
+              className="mr-2 rounded-lg px-4 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800 lg:px-5 lg:py-2.5"
             >
               Log in
             </a>
@@ -29,7 +29,7 @@ export default function TheHeader() {
               <form>
                 <select
                   id="countries"
-                  className="rounded-lg border-gray-300 bg-gray-50 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:placeholder-gray-400 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-blue-500 dark:focus:ring-blue-500 block w-full border p-2.5"
+                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                 >
                   <option key={1} defaultValue={'en'} value="en">
                     English
@@ -45,7 +45,7 @@ export default function TheHeader() {
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
-              className="rounded-lg text-sm text-gray-500 hover:bg-gray-100 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-1 inline-flex items-center p-2 focus:outline-none focus:ring-2 lg:hidden"
+              className="ml-1 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden"
               aria-controls="mobile-menu-2"
               aria-expanded="false"
             >
@@ -85,7 +85,7 @@ export default function TheHeader() {
               <li>
                 <a
                   href="/conferences"
-                  className="rounded text-white bg-primary-700 dark:text-white lg:text-primary-700 block py-2 pl-3 pr-4 lg:bg-transparent lg:p-0"
+                  className="block rounded bg-primary-700 py-2 pl-3 pr-4 text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-primary-700"
                   aria-current="page"
                 >
                   <p>Conferences</p>
@@ -94,7 +94,7 @@ export default function TheHeader() {
               <li>
                 <a
                   href="events"
-                  className="border-gray-100 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:hover:text-primary-700 lg:dark:hover:text-white block border-b py-2 pl-3 pr-4 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:dark:hover:bg-transparent"
+                  className="block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                   aria-current="page"
                 >
                   <p>Events</p>
@@ -103,7 +103,7 @@ export default function TheHeader() {
               <li>
                 <a
                   href="spaces"
-                  className="border-gray-100 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:hover:text-primary-700 lg:dark:hover:text-white block border-b py-2 pl-3 pr-4 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:dark:hover:bg-transparent"
+                  className="block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                 >
                   <p>Spaces</p>
                 </a>
@@ -111,7 +111,7 @@ export default function TheHeader() {
               <li>
                 <a
                   href="venues"
-                  className="border-gray-100 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:hover:text-primary-700 lg:dark:hover:text-white block border-b py-2 pl-3 pr-4 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:dark:hover:bg-transparent"
+                  className="block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                 >
                   Venues
                 </a>
@@ -119,7 +119,7 @@ export default function TheHeader() {
               <li>
                 <a
                   href="sharing"
-                  className="border-gray-100 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:hover:text-primary-700 lg:dark:hover:text-white block border-b py-2 pl-3 pr-4 lg:border-0 lg:p-0 lg:hover:bg-transparent lg:dark:hover:bg-transparent"
+                  className="block border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                 >
                   Sharing
                 </a>
