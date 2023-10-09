@@ -35,8 +35,7 @@ export default function Home() {
           </h1>
           <p className="mb-8 hidden text-lg font-normal text-gray-500 dark:text-gray-200 sm:px-16 lg:block lg:px-48 lg:text-xl">
             Epic conferences, side events, local meetups, webinars, venues
-            rating, hotel sharing... Well not quite
-            <em>anything</em>, but all your need.
+            rating, hotel sharing... Well not quite anything, but all your need.
           </p>
           <form className="mx-auto w-full max-w-md">
             <label
