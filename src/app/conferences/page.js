@@ -18,15 +18,15 @@ export default function Page() {
             <div className="md:py-6 md:pr-10">
               <div className="relative flex pb-12">
                 <div className="absolute inset-0 flex h-full w-10 items-center justify-center">
-                  <div className="pointer-events-none h-full w-1 bg-gray-800"></div>
+                  <div className="bg-gray-800 pointer-events-none h-full w-1"></div>
                 </div>
-                <div className="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-800 text-white">
+                <div className="rounded-full bg-blue-800 text-white relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center">
                   <svg
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="h-5 w-5"
                     viewBox="0 0 24 24"
                   >
@@ -35,10 +35,10 @@ export default function Page() {
                 </div>
 
                 <div className="flex-grow pl-4">
-                  <h2 className="title-font mb-1 text-lg font-medium tracking-wider text-white">
+                  <h2 className="title-font text-lg tracking-wider text-white mb-1 font-medium">
                     September
                   </h2>
-                  <div className="mt-6 leading-relaxed">
+                  <div className="leading-relaxed mt-6">
                     <CardFlex />
                   </div>
                 </div>
@@ -46,9 +46,9 @@ export default function Page() {
 
               <div className="relative flex pb-12">
                 <div className="absolute inset-0 flex h-full w-10 items-center justify-center">
-                  <div className="pointer-events-none h-full w-1 bg-gray-800"></div>
+                  <div className="bg-gray-800 pointer-events-none h-full w-1"></div>
                 </div>
-                <div className="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white">
+                <div className="rounded-full bg-blue-500 text-white relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center">
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -62,7 +62,7 @@ export default function Page() {
                   </svg>
                 </div>
                 <div className="flex-grow pl-4">
-                  <h2 className="title-font mb-1 text-lg font-medium tracking-wider text-white">
+                  <h2 className="title-font text-lg tracking-wider text-white mb-1 font-medium">
                     October
                   </h2>
                   <div className="leading-relaxed">
@@ -73,9 +73,9 @@ export default function Page() {
               </div>
               <div className="relative flex pb-12">
                 <div className="absolute inset-0 flex h-full w-10 items-center justify-center">
-                  <div className="pointer-events-none h-full w-1 bg-gray-800"></div>
+                  <div className="bg-gray-800 pointer-events-none h-full w-1"></div>
                 </div>
-                <div className="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white">
+                <div className="rounded-full bg-blue-500 text-white relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center">
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -90,7 +90,7 @@ export default function Page() {
                   </svg>
                 </div>
                 <div className="flex-grow pl-4">
-                  <h2 className="title-font mb-1 text-sm font-medium tracking-wider text-white">
+                  <h2 className="title-font text-sm tracking-wider text-white mb-1 font-medium">
                     STEP 3
                   </h2>
                   <p className="leading-relaxed">
@@ -101,9 +101,9 @@ export default function Page() {
               </div>
               <div className="relative flex pb-12">
                 <div className="absolute inset-0 flex h-full w-10 items-center justify-center">
-                  <div className="pointer-events-none h-full w-1 bg-gray-800"></div>
+                  <div className="bg-gray-800 pointer-events-none h-full w-1"></div>
                 </div>
-                <div className="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white">
+                <div className="rounded-full bg-blue-500 text-white relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center">
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -118,7 +118,7 @@ export default function Page() {
                   </svg>
                 </div>
                 <div className="flex-grow pl-4">
-                  <h2 className="title-font mb-1 text-sm font-medium tracking-wider text-white">
+                  <h2 className="title-font text-sm tracking-wider text-white mb-1 font-medium">
                     STEP 4
                   </h2>
                   <p className="leading-relaxed">card</p>
@@ -126,7 +126,7 @@ export default function Page() {
               </div>
 
               <div className="relative flex">
-                <div className="relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-white">
+                <div className="rounded-full bg-blue-500 text-white relative z-10 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center">
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -141,7 +141,7 @@ export default function Page() {
                   </svg>
                 </div>
                 <div className="flex-grow pl-4">
-                  <h2 className="title-font mb-1 text-sm font-medium tracking-wider text-white">
+                  <h2 className="title-font text-sm tracking-wider text-white mb-1 font-medium">
                     FINISH
                   </h2>
                   <div className="leading-relaxed">
