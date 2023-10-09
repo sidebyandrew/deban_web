@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <>
       <Popover.Root>
-        <Popover.Trigger>More info</Popover.Trigger>
+        <Popover.Trigger className={'bg-red-9'}>More info</Popover.Trigger>
         <Popover.Portal>
-          <Popover.Content>
+          <Popover.Content className={'bg-red-9 text-green-4'}>
             Some more info…
             <Popover.Arrow />
           </Popover.Content>
