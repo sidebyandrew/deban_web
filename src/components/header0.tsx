@@ -7,7 +7,7 @@ export default function TheHeaderOld() {
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
           <a href="/" className="flex items-center">
             <Image
-              src="/img/logo/logo.svg"
+              src="/images/logo/logo.svg"
               className="mr-3 h-6 sm:h-9"
               alt=" Logo"
               width="36"

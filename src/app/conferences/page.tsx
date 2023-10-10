@@ -1,17 +1,75 @@
-import { button, title } from '@/components/primitives';
-import { Button } from '@nextui-org/button';
+'use client';
+import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
 
-export default function PricingPage() {
-  console.error(button({ size: 'lg', color: 'warn' }));
-  console.error('=====');
-  console.error(button.defaultVariants);
+export default function App() {
+  const list = [
+    {
+      title: 'Orange',
+      img: '/images/fruit-1.jpeg',
+      price: '$5.50',
+    },
+    {
+      title: 'Tangerine',
+      img: '/images/fruit-2.jpeg',
+      price: '$3.00',
+    },
+    {
+      title: 'Raspberry',
+      img: '/images/fruit-3.jpeg',
+      price: '$10.00',
+    },
+    {
+      title: 'Lemon',
+      img: '/images/fruit-4.jpeg',
+      price: '$5.30',
+    },
+    {
+      title: 'Avocado',
+      img: '/images/fruit-5.jpeg',
+      price: '$15.70',
+    },
+    {
+      title: 'Lemon 2',
+      img: '/images/fruit-6.jpeg',
+      price: '$8.00',
+    },
+    {
+      title: 'Banana',
+      img: '/images/fruit-7.jpeg',
+      price: '$7.50',
+    },
+    {
+      title: 'Watermelon',
+      img: '/images/fruit-8.jpeg',
+      price: '$12.20',
+    },
+  ];
+
   return (
-    <div>
-      <h1 className={title()}>Conferences</h1>
-
-      <Button radius="full" className={button()}>
-        @nextui-org/button{' '}
-      </Button>
+    <div className="grid grid-cols-2 gap-2 bg-green-600 sm:grid-cols-4">
+      {list.map((item, index) => (
+        <Card
+          shadow="sm"
+          key={index}
+          isPressable
+          onPress={() => console.log('item pressed')}
+        >
+          <CardBody className="overflow-visible p-0">
+            <Image
+              shadow="sm"
+              radius="lg"
+              width="100%"
+              alt={item.title}
+              className="h-[140px] w-full object-cover"
+              src={item.img}
+            />
+          </CardBody>
+          <CardFooter className="justify-between text-small">
+            <b>{item.title}</b>
+            <p className="text-default-500">{item.price}</p>
+          </CardFooter>
+        </Card>
+      ))}
     </div>
   );
 }
