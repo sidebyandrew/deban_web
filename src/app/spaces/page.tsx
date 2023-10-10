@@ -3,7 +3,7 @@ import { title } from '@/components/primitives';
 export default function PricingPage() {
   return (
     <div>
-      <h1 className={title()}>Events</h1>
+      <h1 className={title()}>Spaces</h1>
     </div>
   );
 }

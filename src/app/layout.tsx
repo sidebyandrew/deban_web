@@ -5,7 +5,7 @@ import { siteConfig } from '@/config/site';
 import { Link } from '@nextui-org/link';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
-import './globals.css';
+import '../styles/globals.css';
 
 export const metadata: Metadata = {
   title: { default: siteConfig.name, template: `%s - ${siteConfig.name}` },
