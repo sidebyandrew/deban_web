@@ -45,7 +45,7 @@ export default function App() {
         />
         <NavbarBrand className="mr-4">
           <DebanLogo />
-          <p className="hidden font-bold text-inherit sm:block">ACME</p>
+          <p className="hidden font-bold text-inherit sm:block">Deban</p>
         </NavbarBrand>
         <NavbarContent className="hidden gap-3 sm:flex">
           <NavbarItem>
