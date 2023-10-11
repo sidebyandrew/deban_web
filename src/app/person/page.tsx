@@ -1,10 +1,13 @@
 import PersonInfo from '@/components/person-info';
-import { peopleList } from '@/utils/data';
+import { Person } from '@/interfaces';
 
-export default function PersonPage() {
+export default async function PersonPage() {
+  const res = await fetch(`http://localhost:3000/api/people/`);
+  let jsonPromise = res.json();
+  let json = await jsonPromise;
   return (
     <ul>
-      {peopleList.map((p) => (
+      {json.map((p: Person) => (
         <PersonInfo person={p} key={p.id} />
       ))}
     </ul>
