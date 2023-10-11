@@ -1,5 +1,6 @@
 'use client';
-import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
+import { conferencesList } from '@/utils/data';
+import { Card, CardBody, CardFooter, Divider, Image } from '@nextui-org/react';
 
 export default function App() {
   const list = [
@@ -46,27 +47,31 @@ export default function App() {
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-2 bg-green-600 sm:grid-cols-4">
-      {list.map((item, index) => (
+    <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+      {conferencesList.map((item, index) => (
         <Card
-          shadow="sm"
+          shadow="lg"
+          radius="sm"
           key={index}
           isPressable
-          onPress={() => console.log('item pressed')}
+          onPress={() => console.log({ item })}
         >
           <CardBody className="overflow-visible p-0">
             <Image
               shadow="sm"
-              radius="lg"
+              radius="sm"
               width="100%"
               alt={item.title}
-              className="h-[140px] w-full object-cover"
-              src={item.img}
+              className="object-fit mb- h-64 w-full"
+              src={item.cover}
             />
+            <div>
+              <p className="mx-2 line-clamp-2">{item.title}</p>
+            </div>
+            <Divider />
           </CardBody>
           <CardFooter className="justify-between text-small">
-            <b>{item.title}</b>
-            <p className="text-default-500">{item.price}</p>
+            <b>{item.end_time}</b>
           </CardFooter>
         </Card>
       ))}

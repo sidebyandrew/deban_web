@@ -1,7 +1,8 @@
-export const conferences = [
+export const conferencesList = [
   {
     cid: 1,
-    title: 'Cypherpunk 2023 ',
+    title:
+      "Cypherpunk 2023 CypherPunk 2023 will expand your education about blockchain projects.The A³ Summit connects Web2 and Web3 experts, featuring discussions on Web3's future, merging forces from Asia and global VCs. Topics include Web2 to Web3 transition, innovation, and industry insights. Co-hosted by ZAN, Artela, Trusta Labs, SynFutures, Web3Port, HashKey Capital, and Alibaba Cloud. Traffic guidance is provided for attendees. ",
     brief:
       'CypherPunk 2023 will expand your education about blockchain projects, Web3, decentralization, AI and disruptive technology. Come listen to some of the most educated speakers in the field!',
     desc: '',
@@ -21,7 +22,8 @@ export const conferences = [
   },
   {
     cid: 2,
-    title: 'A³ Summit - Accelerate Web3 Adoption in Asia ',
+    title:
+      "The A³ Summit connects Web2 and Web3 experts, featuring discussions on Web3's future, merging forces from Asia and global VCs. Topics include Web2 to Web3 transition, innovation, and industry insights. Co-hosted by ZAN, Artela, Trusta Labs, SynFutures, Web3Port, HashKey Capital, and Alibaba Cloud. Traffic guidance is provided for attendees.",
     brief:
       "The A³ Summit connects Web2 and Web3 experts, featuring discussions on Web3's future, merging forces from Asia and global VCs. Topics include Web2 to Web3 transition, innovation, and industry insights. Co-hosted by ZAN, Artela, Trusta Labs, SynFutures, Web3Port, HashKey Capital, and Alibaba Cloud. Traffic guidance is provided for attendees.",
     desc: 'bela bela',
