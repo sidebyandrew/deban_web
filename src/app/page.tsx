@@ -56,7 +56,7 @@ export default function Home() {
                 radius="sm"
                 width="100%"
                 alt={item.title}
-                className="object-fit mb- h-64 w-full"
+                className="object-fit mb- h-64 w-full hover:object-contain"
                 src={item.cover}
               />
               <div>
