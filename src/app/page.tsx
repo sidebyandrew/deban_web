@@ -23,7 +23,7 @@ export default function Home() {
         <h1 className={title()}></h1>
         <h2 className={subtitle({ class: 'mt-4' })}>
           Epic conferences, side events, local meetups, webinars, venues rating,
-          hotel sharing...
+          hotel sharing ...
         </h2>
       </div>
 
