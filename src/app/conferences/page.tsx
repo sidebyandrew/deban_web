@@ -67,11 +67,15 @@ export default function App() {
             />
             <div>
               <p className="mx-2 line-clamp-2">{item.title}</p>
+              <p className="mx-2 mt-2">{item.venue}</p>
+              <p className="mx-2 mt-2">
+                {item.start_time}- {item.end_time}
+              </p>
             </div>
             <Divider />
           </CardBody>
           <CardFooter className="justify-between text-small">
-            <b>{item.end_time}</b>
+            <b>{item.host.name}</b>
           </CardFooter>
         </Card>
       ))}
