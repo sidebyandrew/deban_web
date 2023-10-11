@@ -1,5 +1,7 @@
+import { WEB_DOMAIN } from '@/utils/env';
+
 async function getPeople(queryId: string) {
-  const res = await fetch(`http://localhost:3000/api/people/${queryId}`);
+  const res = await fetch(WEB_DOMAIN() + `/api/people/${queryId}`);
   return res.json();
 }
 

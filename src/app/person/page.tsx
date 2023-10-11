@@ -1,8 +1,9 @@
 import PersonInfo from '@/components/person-info';
 import { Person } from '@/interfaces';
+import { WEB_DOMAIN } from '@/utils/env';
 
 export default async function PersonPage() {
-  const res = await fetch(`http://localhost:3000/api/people/`);
+  const res = await fetch(WEB_DOMAIN() + `/api/people/`);
   let jsonPromise = res.json();
   let json = await jsonPromise;
   return (
