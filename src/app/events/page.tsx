@@ -1,12 +1,14 @@
-'use client'
+import { button, title } from '@/components/primitives';
+import { Button } from '@nextui-org/button';
 
-import Link from "next/link";
-import Image from "next/image";
+export default function EventPage() {
+  return (
+    <div>
+      <h1 className={title({ size: 'sm' })}>Events</h1>
 
-export default function Page() {
-    return <> <h1>Hello Events</h1>
-
-
-        <Link href="/conferences">Conferences</Link>
-    </>
+      <Button radius="full" className={button()}>
+        @nextui-org/button{' '}
+      </Button>
+    </div>
+  );
 }
