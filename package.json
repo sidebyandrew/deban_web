@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "prisma generate && next dev",
+    "build": "prisma generate && prisma db push && prisma db seed && next build",
     "start": "next start",
     "lint": "next lint"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "dependencies": {
     "@nextui-org/button": "^2.0.21",
@@ -34,6 +37,7 @@
     "server-only": "^0.0.1"
   },
   "devDependencies": {
+    "@prisma/client": "^5.4.2",
     "@types/node": "^20.8.3",
     "@types/react": "^18.2.25",
     "@types/react-dom": "^18.2.11",
@@ -46,8 +50,10 @@
     "prettier": "^3.0.3",
     "prettier-plugin-organize-imports": "^3.2.3",
     "prettier-plugin-tailwindcss": "^0.5.5",
+    "prisma": "^5.4.2",
     "tailwind-variants": "^0.1.14",
     "tailwindcss": "^3.3.3",
-    "typescript": "^5"
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   }
 }
