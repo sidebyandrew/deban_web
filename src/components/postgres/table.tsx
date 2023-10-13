@@ -6,7 +6,9 @@ import { sql } from '@vercel/postgres';
 type Props = {};
 
 export async function Table(props: Props) {
+  console.log('==================> start to load data: ', new Date());
   let data = await extracted();
+  console.log('==================> after load data: ', new Date());
   const { rows: users } = data;
 
   return (

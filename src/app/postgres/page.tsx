@@ -5,8 +5,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Suspense } from 'react';
 
-export const runtime = 'edge';
-export const preferredRegion = 'home';
+// export const runtime = 'edge';
+// export const preferredRegion = 'home';
+// https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config
+// 'auto' | 'force-dynamic' | 'error' | 'force-static'
+// auto :（默认）：默认选项，在不阻止任何组件选择动态行为的情况下尽可能多地缓存。
+// force-dynamic: 通过禁用 fetch 请求的所有缓存并始终重新验证，强制动态渲染和获取布局或页面的未缓存数据。该选项相当于：
 export const dynamic = 'force-dynamic';
 
 export default function Home() {

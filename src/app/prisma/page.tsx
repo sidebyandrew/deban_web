@@ -5,15 +5,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Suspense } from 'react';
 
-export const runtime = 'edge';
-export const preferredRegion = 'home';
+//
+// export const runtime = 'edge';
+// export const preferredRegion = 'home';
 export const dynamic = 'force-dynamic';
 
 export default function Home() {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center">
       <Link
-        href="https://vercel.com/templates/next.js/postgres-starter"
+        href="https://vercel.com/templates/next.js/postgres-prisma"
         className="group mt-20 flex space-x-1 rounded-full bg-white/30 px-10 py-2 text-sm font-medium text-gray-600 shadow-sm ring-1 ring-gray-900/5 transition-all hover:shadow-lg active:shadow-sm sm:mt-0"
       >
         <p>Deploy your own to Vercel</p>
@@ -32,7 +33,14 @@ export default function Home() {
         >
           Vercel Postgres
         </Link>{' '}
-        demo. <br /> Built with{' '}
+        demo with{' '}
+        <Link
+          href="https://prisma.io"
+          className="font-medium underline underline-offset-4 transition-colors hover:text-black"
+        >
+          Prisma
+        </Link>{' '}
+        as the ORM. <br /> Built with{' '}
         <Link
           href="https://nextjs.org/docs"
           className="font-medium underline underline-offset-4 transition-colors hover:text-black"
@@ -44,10 +52,10 @@ export default function Home() {
 
       <div className="mt-10 flex w-full max-w-xl justify-center space-x-5 border-t border-gray-300 pt-10 text-gray-600">
         <Link
-          href="https://postgres-prisma.vercel.app/"
+          href="https://postgres-starter.vercel.app/"
           className="font-medium underline underline-offset-4 transition-colors hover:text-black"
         >
-          Prisma
+          Starter
         </Link>
         <Link
           href="https://postgres-kysely.vercel.app/"
@@ -74,7 +82,7 @@ export default function Home() {
           />
         </Link>
         <Link
-          href="https://github.com/vercel/examples/tree/main/storage/postgres-starter"
+          href="https://github.com/vercel/examples/tree/main/storage/postgres-prisma"
           className="flex items-center space-x-2"
         >
           <Image
