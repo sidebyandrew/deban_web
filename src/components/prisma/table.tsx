@@ -3,9 +3,7 @@ import { timeAgo } from '@/utils/time';
 
 export default async function PrismaTable() {
   const startTime = Date.now();
-  console.log('==================> start to load data: ', new Date());
   const users = await prisma.users.findMany();
-  console.log('==================> after load data: ', new Date());
   const duration = Date.now() - startTime;
 
   return (
@@ -14,7 +12,7 @@ export default async function PrismaTable() {
         <div className="space-y-1">
           <h2 className="text-xl font-semibold">Recent Users</h2>
           <p className="text-sm text-gray-500">
-            Fetched {users.length} users in {duration}ms
+            Fetched {users.length} users in {duration} ms
           </p>
         </div>
         {/*<RefreshButton />*/}

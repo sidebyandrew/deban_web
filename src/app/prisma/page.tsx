@@ -1,9 +1,7 @@
 import ExpandingArrow from '@/components/prisma/expanding-arrow';
 import PrismaTable from '@/components/prisma/table';
-import TablePlaceholder from '@/components/prisma/table-placeholder';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Suspense } from 'react';
 
 //
 // export const runtime = 'edge';
@@ -23,9 +21,9 @@ export default function Home() {
       <h1 className="bg-gradient-to-br from-black via-[#171717] to-[#575757] bg-clip-text pb-8 pt-4 text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
         Postgres on Vercel
       </h1>
-      <Suspense fallback={<TablePlaceholder />}>
-        <PrismaTable />
-      </Suspense>
+      {/*<Suspense fallback={<TablePlaceholder />}>*/}
+      <PrismaTable />
+      {/*</Suspense>*/}
       <p className="mt-6 w-full max-w-lg text-center font-light text-gray-600">
         <Link
           href="https://vercel.com/postgres"

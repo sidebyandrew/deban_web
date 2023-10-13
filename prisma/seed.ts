@@ -32,6 +32,67 @@ async function main() {
           'https://pbs.twimg.com/profile_images/1506792347840888834/dS-r50Je_400x400.jpg',
       },
     }),
+    await prisma.users.upsert({
+      where: { email: 'ste111y@vercel.com' },
+      update: {},
+      create: {
+        name: 'Steven Tey',
+        email: 'ste111y@vercel.com',
+        image:
+          'https://pbs.twimg.com/profile_images/1506792347840888834/dS-r50Je_400x400.jpg',
+      },
+    }),
+    await prisma.users.upsert({
+      where: { email: 'ste22232y@vercel.com' },
+      update: {},
+      create: {
+        name: 'Steven Tey',
+        email: 'ste22232y@vercel.com',
+        image:
+          'https://pbs.twimg.com/profile_images/1506792347840888834/dS-r50Je_400x400.jpg',
+      },
+    }),
+    await prisma.users.upsert({
+      where: { email: 'st11211ey@vercel.com' },
+      update: {},
+      create: {
+        name: 'Steven Tey222',
+        email: 'st11211ey@vercel.com',
+        image:
+          'https://pbs.twimg.com/profile_images/1506792347840888834/dS-r50Je_400x400.jpg',
+      },
+    }),
+
+    await prisma.users.upsert({
+      where: { email: '3st11211ey@vercel.com' },
+      update: {},
+      create: {
+        name: 'Steven Tey222',
+        email: '3st11211ey@vercel.com',
+        image:
+          'https://pbs.twimg.com/profile_images/1506792347840888834/dS-r50Je_400x400.jpg',
+      },
+    }),
+    await prisma.users.upsert({
+      where: { email: '2st11211ey@vercel.com' },
+      update: {},
+      create: {
+        name: 'Steven Tey222',
+        email: '2st11211ey@vercel.com',
+        image:
+          'https://pbs.twimg.com/profile_images/1506792347840888834/dS-r50Je_400x400.jpg',
+      },
+    }),
+    await prisma.users.upsert({
+      where: { email: '1st11211ey@vercel.com' },
+      update: {},
+      create: {
+        name: 'Steven Tey222',
+        email: '1st11211ey@vercel.com',
+        image:
+          'https://pbs.twimg.com/profile_images/1506792347840888834/dS-r50Je_400x400.jpg',
+      },
+    }),
   ]);
   console.log(response);
 }
