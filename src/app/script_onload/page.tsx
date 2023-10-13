@@ -9,7 +9,7 @@ export default function ScriptOnload() {
 
   function handleLoad() {
     let stripe = window.Stripe('p_k');
-    console.log('stripe loaded.', new Date(), stripe);
+    console.log('stripe loaded ', new Date(), stripe);
     setStripe(stripe);
   }
 
