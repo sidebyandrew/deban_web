@@ -1,3 +1,4 @@
+import prisma from '@/utils/prisma';
 import { timeAgo } from '@/utils/time';
 import RefreshButton from './refresh-button';
 

@@ -1,3 +1,5 @@
+import prisma from '../src/utils/prisma';
+
 async function main() {
   const response = await Promise.all([
     prisma.users.upsert({
