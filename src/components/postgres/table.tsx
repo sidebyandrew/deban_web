@@ -1,14 +1,14 @@
+import { seed } from '@/components/postgres/seed';
 import RefreshButton from '@/components/refresh-button';
-import { seed } from '@/db/seed';
 import { timeAgo } from '@/utils/time';
 import { sql } from '@vercel/postgres';
 
 type Props = {};
 
 export async function Table(props: Props) {
-  console.log('==================> start to load data: ', new Date());
+  const startTime = Date.now();
   let data = await extracted();
-  console.log('==================> after load data: ', new Date());
+  const duration = Date.now() - startTime;
   const { rows: users } = data;
 
   return (
@@ -17,7 +17,7 @@ export async function Table(props: Props) {
         <div className="space-y-1">
           <h2 className="text-xl font-semibold">Recent Users</h2>
           <p className="text-sm text-gray-500">
-            Fetched {users.length} users in xxx ms
+            Fetched {users.length} users in {duration} ms
           </p>
         </div>
         <RefreshButton />

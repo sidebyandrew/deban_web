@@ -7,20 +7,22 @@ node_modules/.prisma/client 文件夹中，但您可以指定自定义位置。
 
 > 生成的文件路径是 ：_web/node_modules/.pnpm/@prisma+client@5.4.2_prisma@5.4.2/node_modules/@prisma/client
 
-## 1.1 按照
+## 1.1 配置
 
-```bash
-# NPM 
-npm install @prisma/client
-```
-
-## 1.2 配置
+先配置schema和.env，因为在安装 @prisma/client 时，会自动执行一次 prisma generate
 
 ```
     #File: prisma / schema.prisma
     generator client{
     provider = "prisma-client-js"
     }
+```
+
+## 1.2 安装（先配置再安装）
+
+```bash
+# NPM 
+npm install @prisma/client
 ```
 
 ## 1.3 生成客户端
