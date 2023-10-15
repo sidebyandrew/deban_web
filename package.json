@@ -29,12 +29,14 @@
     "@types/ms": "^0.7.32",
     "@vercel/postgres": "^0.5.0",
     "framer-motion": "^10.16.4",
+    "magic-sdk": "^21.0.0",
     "ms": "^2.1.3",
     "next": "13.5.4",
     "next-themes": "^0.2.1",
-    "react": "^18",
-    "react-dom": "^18",
-    "server-only": "^0.0.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "server-only": "^0.0.1",
+    "web3": "^4.1.2"
   },
   "devDependencies": {
     "@prisma/client": "^5.4.2",
