@@ -19,6 +19,7 @@ import clsx from 'clsx';
 import NextLink from 'next/link';
 
 import {
+  DebanLetterLogo,
   DebanLogo,
   DiscordIcon,
   GithubIcon,
@@ -56,7 +57,7 @@ export const TheNavbar = () => {
         <NavbarBrand as="li" className="max-w-fit gap-3">
           <NextLink className="flex items-center justify-start gap-1" href="/">
             <DebanLogo />
-            <p className="font-bold text-inherit">Deban</p>
+            <DebanLetterLogo />
           </NextLink>
         </NavbarBrand>
         <ul className="ml-2 hidden justify-start gap-4 lg:flex">

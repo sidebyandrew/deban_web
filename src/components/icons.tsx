@@ -8,18 +8,126 @@ export const DebanLogo: React.FC<IconSvgProps> = ({
   ...props
 }) => (
   <svg
-    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    version="1.1"
+    viewBox="156 140 1890 2294"
     height={size || height}
-    viewBox="0 0 32 32"
     width={size || width}
     {...props}
   >
-    <path
-      clipRule="evenodd"
-      d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-      fill="currentColor"
-      fillRule="evenodd"
-    />
+    <defs />
+    <g
+      id="deban-logo-white"
+      stroke="none"
+      fill="none"
+      stroke-dasharray="none"
+      fill-opacity="1"
+      stroke-opacity="1"
+    >
+      <title>deban-logo-white</title>
+      <g id="deban-logo-white_Layer_1">
+        <title>Layer 1</title>
+        <g id="Graphic_4" />
+        <g id="Group_7">
+          <g id="Graphic_5">
+            <title>.</title>
+            <rect
+              x="1197.2"
+              y="1497"
+              width="153.6"
+              height="153.6"
+              fill="white"
+            />
+          </g>
+          <g id="Graphic_6">
+            <title>D</title>
+            <path
+              d="M 1768.8 2227.576 L 1412.448 2433.4 L 156 2433.4 L 156 283 L 1412.448 283 L 1768.8 488.824 Z M 463.2 559.48 L 463.2 2156.92 L 1461.6 2156.92 L 1461.6 559.48 Z"
+              fill="white"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+);
+
+export const DebanLetterLogo: React.FC<IconSvgProps> = ({
+  size = 64,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    version="1.1"
+    viewBox="146 213 8863 3318"
+    height={size || height}
+    width={size || width}
+    {...props}
+  >
+    <defs />
+    <g
+      id="deban-logo-c-wihte-bg-trans_1"
+      stroke="none"
+      fill="none"
+      strokeDasharray="none"
+      fillOpacity="1"
+      strokeOpacity="1"
+    >
+      <title>deban-logo-c-wihte-bg-trans 1</title>
+      <g id="deban-logo-c-wihte-bg-trans_1_Layer_1">
+        <title>Layer 1</title>
+        <g id="Group_13">
+          <g id="Graphic_4">
+            <rect x="4388.55" y="213" width="15" height="22" fill="white" />
+          </g>
+          <g id="Group_11">
+            <title>Deban</title>
+            <g id="Graphic_6">
+              <path
+                d="M 1758.8 3309.376 L 1402.448 3515.2 L 146 3515.2 L 146 1364.8 L 1402.448 1364.8 L 1758.8 1570.624 Z M 453.2 1641.28 L 453.2 3238.72 L 1451.6 3238.72 L 1451.6 1641.28 Z"
+                fill="white"
+              />
+            </g>
+            <g id="Graphic_7">
+              <path
+                d="M 3494.48 3247.936 L 3494.48 3515.2 L 2637.392 3515.2 L 2281.04 3309.376 L 2281.04 2169.664 L 2637.392 1963.84 L 3138.128 1963.84 L 3494.48 2169.664 L 3494.48 2851.648 L 2579.024 2851.648 L 2579.024 3247.936 Z M 2579.024 2231.104 L 2579.024 2584.384 L 3196.496 2584.384 L 3196.496 2231.104 Z"
+                fill="white"
+              />
+            </g>
+            <g id="Graphic_8">
+              <path
+                d="M 4502.096 1963.84 L 4965.968 1963.84 L 5322.32 2169.664 L 5322.32 3324.736 L 4965.968 3530.56 L 4502.096 3530.56 L 4283.984 3404.608 L 4065.872 3530.56 L 3986 3530.56 L 3986 1272.64 L 4283.984 1272.64 L 4283.984 2089.792 Z M 4283.984 2231.104 L 4283.984 3263.296 L 5024.336 3263.296 L 5024.336 2231.104 Z"
+                fill="white"
+              />
+            </g>
+            <g id="Graphic_9">
+              <path
+                d="M 6050.384 2885.44 L 6050.384 3263.296 L 6667.856 3263.296 L 6667.856 2885.44 Z M 6108.752 3530.56 L 5752.4 3324.736 L 5752.4 2824 L 6108.752 2618.176 L 6667.856 2618.176 L 6667.856 2246.464 L 5906 2246.464 L 5906 1979.2 L 6609.488 1979.2 L 6965.84 2185.024 L 6965.84 3530.56 L 6885.968 3530.56 L 6667.856 3404.608 L 6449.744 3530.56 Z"
+                fill="white"
+              />
+            </g>
+            <g id="Graphic_10">
+              <path
+                d="M 8762.96 2169.664 L 8762.96 3515.2 L 8464.976 3515.2 L 8464.976 2231.104 L 7755.344 2231.104 L 7755.344 3515.2 L 7457.36 3515.2 L 7457.36 1963.84 L 7681.616 1963.84 L 7755.344 2089.792 L 7973.456 1963.84 L 8406.608 1963.84 Z"
+                fill="white"
+              />
+            </g>
+          </g>
+          <g id="Graphic_12">
+            <title>.</title>
+            <rect
+              x="1195.5199"
+              y="2568.2"
+              width="153.6"
+              height="153.6"
+              fill="white"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
   </svg>
 );
 
