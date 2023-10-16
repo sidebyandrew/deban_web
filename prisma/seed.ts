@@ -3,6 +3,7 @@ import prisma from '../src/utils/prisma';
 const { categories, products } = require('./data.js');
 
 async function main() {
+  return;
   const response = await Promise.all([
     prisma.users.upsert({
       where: { email: 'rauchg@vercel.com' },
@@ -125,15 +126,15 @@ const loadProduct = async () => {
     await prisma.$disconnect();
   }
 };
-
-loadProduct()
-  .then(() => {
-    console.info('loadProduct successful');
-  })
-  .catch(async (e) => {
-    console.error(e);
-    process.exit(1);
-  });
+//
+// loadProduct()
+//   .then(() => {
+//     console.info('loadProduct successful');
+//   })
+//   .catch(async (e) => {
+//     console.error(e);
+//     process.exit(1);
+//   });
 
 main()
   .then(async () => {
