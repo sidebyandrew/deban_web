@@ -50,6 +50,9 @@ dependencies:
   '@types/ms':
     specifier: ^0.7.32
     version: 0.7.32
+  '@vercel/analytics':
+    specifier: ^1.1.1
+    version: 1.1.1
   '@vercel/postgres':
     specifier: ^0.5.0
     version: 0.5.0
@@ -2778,6 +2781,12 @@ packages:
       '@typescript-eslint/types': 6.7.4
       eslint-visitor-keys: 3.4.3
     dev: true
+
+  /@vercel/analytics@1.1.1:
+    resolution: {integrity: sha512-+NqgNmSabg3IFfxYhrWCfB/H+RCUOCR5ExRudNG2+pcRehq628DJB5e1u1xqwpLtn4pAYii4D98w7kofORAGQA==}
+    dependencies:
+      server-only: 0.0.1
+    dev: false
 
   /@vercel/postgres@0.5.0:
     resolution: {integrity: sha512-MFWp9SZmADqBe2x2mzEvwmGLiwOd8PVkUxYeBZx/RqdHl0bd8/1BH0zBR+zSimGyi9P/MVtZoJLdf5dkWw9m5Q==}

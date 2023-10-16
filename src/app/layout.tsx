@@ -3,6 +3,7 @@ import { TheNavbar } from '@/components/navbar';
 import { fontSans } from '@/config/fonts';
 import { siteConfig } from '@/config/site';
 import { Link } from '@nextui-org/link';
+import { Analytics } from '@vercel/analytics/react';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
 import '../styles/globals.css';
@@ -56,6 +57,7 @@ export default function RootLayout({
             </footer>
           </div>
         </Providers>
+        <Analytics />
       </body>
     </html>
   );

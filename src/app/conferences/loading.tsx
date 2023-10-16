@@ -1,4 +1,5 @@
+import { CircularProgress } from '@nextui-org/progress';
+
 export default function Loading() {
-  // You can add any UI inside Loading, including a Skeleton.
-  return <div className="text-center text-8xl">Loading...</div>;
+  return <CircularProgress aria-label="Loading..." />;
 }
