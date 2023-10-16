@@ -18,12 +18,7 @@ import { siteConfig } from '@/config/site';
 import clsx from 'clsx';
 import NextLink from 'next/link';
 
-import {
-  DebanLetterLogo,
-  DebanLogo,
-  GithubIcon,
-  SearchIcon,
-} from '@/components/icons';
+import { DebanLetterLogo, DebanLogo, SearchIcon } from '@/components/icons';
 import { MagicConnect } from '@/components/magic/MagicConnect';
 import MagicProvider from '@/components/magic/MagicProvider';
 import { ThemeSwitch } from '@/components/theme-switch';
@@ -86,23 +81,11 @@ export const TheNavbar = () => {
           justify="end"
         >
           <NavbarItem className="hidden gap-2 sm:flex">
-            {/*<Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">*/}
-            {/*  <TwitterIcon className="text-default-500" />*/}
-            {/*</Link>*/}
-            {/*<Link isExternal href={siteConfig.links.discord} aria-label="Discord">*/}
-            {/*  <DiscordIcon className="text-default-500" />*/}
-            {/*</Link>*/}
-            {/*<Link isExternal href={siteConfig.links.github} aria-label="Github">*/}
-            {/*  <GithubIcon className="text-default-500" />*/}
-            {/*</Link>*/}
             <ThemeSwitch />
           </NavbarItem>
           <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
           <NavbarItem className="hidden md:flex">
-            <MagicProvider>
-              <MagicConnect />
-            </MagicProvider>
-
+            <MagicConnect />
             {/*<Button*/}
             {/*  isExternal*/}
             {/*  as={Link}*/}
@@ -117,9 +100,6 @@ export const TheNavbar = () => {
         </NavbarContent>
 
         <NavbarContent className="basis-1 pl-4 sm:hidden" justify="end">
-          <Link isExternal href={siteConfig.links.github} aria-label="Github">
-            <GithubIcon className="text-default-500" />
-          </Link>
           <ThemeSwitch />
           <NavbarMenuToggle />
         </NavbarContent>
@@ -144,6 +124,7 @@ export const TheNavbar = () => {
                 </Link>
               </NavbarMenuItem>
             ))}
+            <MagicConnect />
           </div>
         </NavbarMenu>
       </NextUINavbar>
