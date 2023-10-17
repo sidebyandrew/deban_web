@@ -14,11 +14,11 @@ export const FloatingTabs: React.FC<{}> = () => {
       radius="full"
       size="sm"
     >
-      <Tab key="notes" title="Conference" />
-      <Tab key="tasks" title="Side Event" />
-      <Tab key="tasks" title="Panel" />
-      <Tab key="files" title="Hackathon" />
-      <Tab key="files" title="..." />
+      <Tab key="notes" title="Conferences" />
+      <Tab key="events" title="Side Events" />
+      <Tab key="panels" title="Panels" />
+      <Tab key="hanckathon" title="Hackathons" />
+      <Tab key="more" title="..." />
     </Tabs>
   );
 };
