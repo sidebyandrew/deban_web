@@ -2,6 +2,8 @@
 
 import HomeFeature from '@/components/home/feature';
 import { HomeHero } from '@/components/home/hero';
+import BadgeInfo from '@/components/icon/badgeInfo';
+import BadgeVerified from '@/components/icon/badgeVerified';
 import { conferencesList } from '@/utils/data';
 import { Card, CardBody, CardFooter, Divider, Image } from '@nextui-org/react';
 
@@ -10,7 +12,10 @@ export default function Home() {
     <section className="flex flex-col items-center justify-center">
       <HomeHero />
 
-      <div className="mt-20 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+      <h3 className="mt-20 text-left text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-3xl">
+        Epic Conferences
+      </h3>
+      <div className="mt-8 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
         {conferencesList.map((item, index) => (
           <Card
             shadow="lg"
@@ -38,13 +43,26 @@ export default function Home() {
               <Divider />
             </CardBody>
             <CardFooter className="justify-between text-small">
-              <b>{item.host.name}</b>
+              <b>
+                <Image
+                  className="m-1 h-6 w-6 rounded-full"
+                  src={item.host.logo}
+                  alt="logo"
+                  width={36}
+                  height={36}
+                />
+                {item.host.name} {item.host.verified && <BadgeVerified />}
+                {!item.host.verified && <BadgeInfo />}
+              </b>
             </CardFooter>
           </Card>
         ))}
       </div>
 
       <div>
+        <h3 className="mt-20 text-left text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-3xl">
+          Features
+        </h3>
         <HomeFeature />
       </div>
     </section>

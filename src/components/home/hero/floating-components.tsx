@@ -5,7 +5,6 @@ import {
   CardFooter,
   Image,
   Input,
-  Pagination,
   Switch,
   Tooltip,
 } from '@nextui-org/react';
@@ -16,7 +15,6 @@ import NextImage from 'next/image';
 import { FloatingTabs } from './floating-tabs';
 
 import { ConsensusCard } from '@/components/home/hero/consensus-card';
-import { NextUILogo } from '@/components/nextui-logo';
 import { useIsMounted } from '@/hooks/use-is-mounted';
 import { useMediaQuery } from '@/hooks/use-media-query';
 
@@ -51,7 +49,7 @@ export const FloatingComponents: React.FC<{}> = () => {
         <Input
           className="absolute -right-[120px] -top-[130px] w-[200px] animate-[levitate_10s_ease_infinite]"
           color="secondary"
-          defaultValue="Event Title"
+          defaultValue=""
           label="Create Your Event"
           labelPlacement="outside"
           variant="bordered"
@@ -73,27 +71,18 @@ export const FloatingComponents: React.FC<{}> = () => {
 
         <ConsensusCard className="absolute -top-[80px] left-[80px] animate-[levitate_16s_ease_infinite] border-none" />
 
-        <Card
-          className="absolute -top-[60px] right-[110px] z-10 max-w-fit animate-[levitate_18s_ease_infinite] border-none"
-          shadow="lg"
-        >
-          <CardBody>
-            <NextUILogo small size={60} />
+        <Card className="z-1 absolute -top-[68px] right-[1px] max-w-fit animate-[levitate_18s_ease_infinite] border-none p-0">
+          <CardBody className="p-0">
+            <Image
+              alt=""
+              as={NextImage}
+              className="object-cover"
+              height={300}
+              src="/images/web3london.webp"
+              width={260}
+            />
           </CardBody>
         </Card>
-
-        <div className="absolute -right-[230px] -top-[40px] z-10 animate-[levitate_14s_ease_infinite_1s]">
-          <Pagination
-            isCompact
-            showControls
-            showShadow
-            classNames={{
-              base: 'rounded-xl',
-            }}
-            initialPage={6}
-            total={10}
-          />
-        </div>
 
         {isMounted && (
           <Tooltip
@@ -122,7 +111,7 @@ export const FloatingComponents: React.FC<{}> = () => {
           className="absolute right-[60px] top-[100px] z-0 max-w-fit animate-[levitate_12s_ease_infinite_1s]"
         >
           <Image
-            alt="Woman listing to music"
+            alt="token2049"
             as={NextImage}
             className="object-cover"
             height={200}
