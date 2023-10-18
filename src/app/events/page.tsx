@@ -1,14 +1,6 @@
-import { button, title } from '@/components/primitives';
-import { Button } from '@nextui-org/button';
+'use client';
+import EpicConferences from '@/components/home/epic-conferences';
 
-export default function EventPage() {
-  return (
-    <div>
-      <h1 className={title({ size: 'sm' })}>Events</h1>
-
-      <Button radius="full" className={button()}>
-        @nextui-org/button{' '}
-      </Button>
-    </div>
-  );
+export default function App() {
+  return <EpicConferences />;
 }
