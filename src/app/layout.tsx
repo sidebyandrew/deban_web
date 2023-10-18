@@ -1,5 +1,5 @@
 import { Providers } from '@/app/providers';
-import { TheNavbar } from '@/components/navbar';
+import TheNavbar from '@/components/navbar';
 import { fontSans } from '@/config/fonts';
 import { siteConfig } from '@/config/site';
 import { Link } from '@nextui-org/link';
@@ -45,14 +45,10 @@ export default function RootLayout({
               <Link
                 isExternal
                 className="flex items-center gap-1 text-current"
-                href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-                title="nextui.org homepage"
+                href="deban.xyz"
+                title="deban.xyz homepage"
               >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">NextUI</p>
-                <p className="text-primary">
-                  {process.env.NEXT_PUBLIC_WEB_DOMAIN}
-                </p>
+                <p className="text-primary">deban.xyz | Social Events</p>
               </Link>
             </footer>
           </div>
