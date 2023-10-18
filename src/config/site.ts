@@ -5,46 +5,30 @@ export const siteConfig = {
   description: 'Deban | Social Events With Pleasure',
   navItems: [
     {
-      label: 'Conferences',
-      href: '/conferences',
-    },
-    {
       label: 'Events',
       href: '/events',
     },
     {
-      label: 'Spaces',
-      href: '/spaces',
+      label: 'Calendars',
+      href: '/calendars',
     },
     {
-      label: 'Venues',
-      href: '/venues',
-    },
-    {
-      label: 'Sharing',
-      href: '/sharing',
+      label: 'Explore',
+      href: '/explore',
     },
   ],
   navMenuItems: [
     {
-      label: 'Conferences',
-      href: '/conferences',
-    },
-    {
       label: 'Events',
       href: '/events',
     },
     {
-      label: 'Spaces',
-      href: '/spaces',
+      label: 'Calendars',
+      href: '/calendars',
     },
     {
-      label: 'Venues',
-      href: '/venues',
-    },
-    {
-      label: 'Sharing',
-      href: '/sharing',
+      label: 'Explore',
+      href: '/explore',
     },
     {
       label: 'Profile',
@@ -57,8 +41,8 @@ export const siteConfig = {
   ],
   links: {
     github: 'https://github.com/sidebyandrew',
-    twitter: 'https://twitter.com/sideby_',
-    docs: 'https://sideby.xyz',
-    discord: 'https://discord.gg/xxxxxxx',
+    twitter: 'https://twitter.com/deban_xyz',
+    docs: 'https://deban.xyz',
+    discord: 'https://discord.gg/kX2RCHRa',
   },
 };

@@ -29,17 +29,9 @@ export const FloatingComponents: React.FC<{}> = () => {
   };
 
   return (
-    <div className="relative z-20 hidden w-1/2 flex-col lg:flex">
+    <div className="relative z-20 hidden w-1/2 flex-col lg:flex bg-red-500">
       <>
-        <Input
-          className="absolute -right-[120px] -top-[130px] w-[200px] animate-[levitate_10s_ease_infinite]"
-          color="secondary"
-          defaultValue=""
-          label="Create Your Event"
-          labelPlacement="outside"
-          variant="bordered"
-          onClear={() => {}}
-        />
+
 
         <div className="absolute -top-[260px] right-[100px] z-0 h-[90px] max-w-fit animate-[levitate_12s_ease_infinite_1s]">
           <Image
@@ -90,6 +82,15 @@ export const FloatingComponents: React.FC<{}> = () => {
             </Button>
           </Tooltip>
         )}
+        <Input
+            className="absolute left-[130px] top-[250px] w-[200px] animate-[levitate_10s_ease_infinite]"
+            color="secondary"
+            defaultValue=""
+            label="Create Your Event"
+            labelPlacement="outside"
+            variant="bordered"
+            onClear={() => {}}
+        />
 
         <Card
           isFooterBlurred

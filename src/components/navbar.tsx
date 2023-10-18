@@ -82,6 +82,7 @@ export default function TheNavbar() {
         </NavbarBrand>
 
         {/* Menu Start */}
+        <div className="hidden gap-4 sm:flex">
         <NavbarContent className="hidden gap-4 sm:flex" justify="end">
           <NavbarItem>
             <Link color="foreground" href="#">
@@ -153,7 +154,7 @@ export default function TheNavbar() {
             </DropdownMenu>
           </Dropdown>
         </NavbarContent>
-
+        </div>
         {/* Menu End */}
 
         <NavbarContent

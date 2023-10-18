@@ -20,7 +20,7 @@ const BgLooper = dynamic(
 
 export const HomeHero = () => {
   return (
-    <section className="relative flex h-[calc(100vh_-_64px)] w-full flex-nowrap items-center justify-between overflow-hidden lg:overflow-visible 2xl:h-[calc(84vh_-_64px)]">
+    <section className="relative flex h-[calc(100vh_-_64px)] w-full flex-nowrap items-center justify-between overflow-hidden  2xl:h-[calc(84vh_-_64px)]">
       <div className="relative z-20 flex w-full flex-col gap-6 lg:w-1/2 xl:mt-2">
         <div className="text-center leading-8 md:text-left md:leading-10">
           <div className="inline-block">
