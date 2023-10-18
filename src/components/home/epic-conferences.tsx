@@ -14,7 +14,7 @@ export default function EpicConferences() {
           radius="sm"
           key={index}
           isPressable
-          onPress={() => console.log({ conference })}
+          onPress={() => window.open(conference.origin, '_blank')}
         >
           <CardBody className="overflow-visible p-0">
             <Image
@@ -41,15 +41,17 @@ export default function EpicConferences() {
           <CardFooter className="justify-between text-small">
             <div className="flex flex-row">
               <div className="flex  flex-row" id="this is 1/2 host info">
-                <div>
-                  <Image
-                    className="m-1 h-6 w-6 rounded-full"
-                    src={conference.host[0].logo}
-                    alt="logo"
-                    width={36}
-                    height={36}
-                  />
-                </div>
+                {conference.host[0].logo && (
+                  <div>
+                    <Image
+                      className="m-1 h-6 w-6 rounded-full"
+                      src={conference.host[0].logo}
+                      alt="logo"
+                      width={36}
+                      height={36}
+                    />
+                  </div>
+                )}
 
                 <div className="g-5 title-font ml-1 mt-2 h-6 text-justify text-xs font-medium tracking-widest text-gray-400">
                   {conference.host[0].name}
