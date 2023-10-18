@@ -3,40 +3,40 @@ import { Input } from '@nextui-org/input';
 import { Kbd } from '@nextui-org/kbd';
 import { Link } from '@nextui-org/link';
 import {
-NavbarBrand,
-NavbarContent,
-NavbarItem,
-NavbarMenu,
-NavbarMenuItem,
-NavbarMenuToggle,
-Navbar as NextUINavbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
+  Navbar as NextUINavbar,
 } from '@nextui-org/navbar';
 
 import { siteConfig } from '@/config/site';
 import NextLink from 'next/link';
 
-import { DebanLetterLogo,DebanLogo,SearchIcon } from '@/components/icons';
+import { DebanLetterLogo, DebanLogo, SearchIcon } from '@/components/icons';
 import { MagicConnect } from '@/components/magic/MagicConnect';
 import MagicProvider from '@/components/magic/MagicProvider';
 import { ThemeSwitch } from '@/components/theme-switch';
 import { Button } from '@nextui-org/button';
 import {
-Dropdown,
-DropdownItem,
-DropdownMenu,
-DropdownTrigger,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
 } from '@nextui-org/dropdown';
 import {
-Activity,
-Camera,
-ChevronDown,
-Flash,
-Scale,
-Server,
-TagUser,
+  Activity,
+  Camera,
+  ChevronDown,
+  Flash,
+  Scale,
+  Server,
+  TagUser,
 } from '@nextui-org/shared-icons';
 
-export const TheNavbar = () => {
+export default function TheNavbar() {
   const icons = {
     chevron: <ChevronDown fill="currentColor" size={16} />,
     scale: <Scale className="text-warning" fill="currentColor" size={30} />,
@@ -200,4 +200,4 @@ export const TheNavbar = () => {
       </NextUINavbar>
     </MagicProvider>
   );
-};
+}
