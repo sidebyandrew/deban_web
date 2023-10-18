@@ -26,7 +26,7 @@ export default function EpicConferences() {
               src={conference.cover}
             />
             <div>
-              <p className="mx-2 line-clamp-2">{conference.title}</p>
+              <p className="m-2 line-clamp-2 text-xl">{conference.title}</p>
               <p className="mx-2 mt-2 flex flex-row text-xs font-medium tracking-widest text-blue-400">
                 <IconMap addClass=" text-blue-800 dark:text-blue-400 mr-1 " />
                 {conference.venue}
@@ -44,7 +44,7 @@ export default function EpicConferences() {
                 <div>
                   <Image
                     className="m-1 h-6 w-6 rounded-full"
-                    src={conference.host.logo}
+                    src={conference.host[0].logo}
                     alt="logo"
                     width={36}
                     height={36}
@@ -52,11 +52,11 @@ export default function EpicConferences() {
                 </div>
 
                 <div className="g-5 title-font ml-1 mt-2 h-6 text-justify text-xs font-medium tracking-widest text-gray-400">
-                  {conference.host.name}
+                  {conference.host[0].name}
                 </div>
 
-                {conference.host.verified && <BadgeVerified />}
-                {!conference.host.verified && <BadgeInfo />}
+                {conference.host[0].verified && <BadgeVerified />}
+                {!conference.host[0].verified && <BadgeInfo />}
               </div>
             </div>
           </CardFooter>
