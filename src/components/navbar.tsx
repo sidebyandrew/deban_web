@@ -3,27 +3,53 @@ import { Input } from '@nextui-org/input';
 import { Kbd } from '@nextui-org/kbd';
 import { Link } from '@nextui-org/link';
 import {
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle,
-  Navbar as NextUINavbar,
+NavbarBrand,
+NavbarContent,
+NavbarItem,
+NavbarMenu,
+NavbarMenuItem,
+NavbarMenuToggle,
+Navbar as NextUINavbar,
 } from '@nextui-org/navbar';
 
-import { link as linkStyles } from '@nextui-org/theme';
-
 import { siteConfig } from '@/config/site';
-import clsx from 'clsx';
 import NextLink from 'next/link';
 
-import { DebanLetterLogo, DebanLogo, SearchIcon } from '@/components/icons';
+import { DebanLetterLogo,DebanLogo,SearchIcon } from '@/components/icons';
 import { MagicConnect } from '@/components/magic/MagicConnect';
 import MagicProvider from '@/components/magic/MagicProvider';
 import { ThemeSwitch } from '@/components/theme-switch';
+import { Button } from '@nextui-org/button';
+import {
+Dropdown,
+DropdownItem,
+DropdownMenu,
+DropdownTrigger,
+} from '@nextui-org/dropdown';
+import {
+Activity,
+Camera,
+ChevronDown,
+Flash,
+Scale,
+Server,
+TagUser,
+} from '@nextui-org/shared-icons';
 
 export const TheNavbar = () => {
+  const icons = {
+    chevron: <ChevronDown fill="currentColor" size={16} />,
+    scale: <Scale className="text-warning" fill="currentColor" size={30} />,
+
+    activity: (
+      <Activity className="text-secondary" fill="currentColor" size={30} />
+    ),
+    flash: <Flash className="text-primary" fill="currentColor" size={30} />,
+    server: <Server className="text-success" fill="currentColor" size={30} />,
+    user: <TagUser className="text-danger" fill="currentColor" size={30} />,
+    camera: <Camera className="text-danger" fill="currentColor" size={30} />,
+  };
+
   const searchInput = (
     <Input
       aria-label="Search"
@@ -48,33 +74,87 @@ export const TheNavbar = () => {
   return (
     <MagicProvider>
       <NextUINavbar maxWidth="xl" position="sticky">
-        <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-          <NavbarBrand as="li" className="max-w-fit gap-3">
-            <NextLink
-              className="flex items-center justify-start gap-1"
-              href="/"
-            >
-              <DebanLogo />
-              <DebanLetterLogo />
-            </NextLink>
-          </NavbarBrand>
-          <ul className="ml-2 hidden justify-start gap-4 lg:flex">
-            {siteConfig.navItems.map((item) => (
-              <NavbarItem key={item.href}>
-                <NextLink
-                  className={clsx(
-                    linkStyles({ color: 'foreground' }),
-                    'data-[active=true]:font-medium data-[active=true]:text-primary'
-                  )}
-                  color="foreground"
-                  href={item.href}
+        <NavbarBrand as="li" className="max-w-fit gap-3">
+          <NextLink className="flex items-center justify-start gap-1" href="/">
+            <DebanLogo />
+            <DebanLetterLogo />
+          </NextLink>
+        </NavbarBrand>
+
+        {/* Menu Start */}
+        <NavbarContent className="hidden gap-4 sm:flex" justify="end">
+          <NavbarItem>
+            <Link color="foreground" href="#">
+              Events
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link color="foreground" href="#">
+              Calendars
+            </Link>
+          </NavbarItem>
+
+          <Dropdown>
+            <NavbarItem>
+              <DropdownTrigger>
+                <Button
+                  disableRipple
+                  className="bg-transparent p-0 data-[hover=true]:bg-transparent"
+                  endContent={icons.chevron}
+                  radius="sm"
+                  variant="light"
                 >
-                  {item.label}
-                </NextLink>
-              </NavbarItem>
-            ))}
-          </ul>
+                  Explore
+                </Button>
+              </DropdownTrigger>
+            </NavbarItem>
+            <DropdownMenu
+              aria-label="ACME features"
+              className="w-[340px]"
+              itemClasses={{
+                base: 'gap-4',
+              }}
+            >
+              <DropdownItem
+                key="hosts"
+                description="Browse and follow up top hosts with customized notification"
+                startContent={icons.activity}
+              >
+                Hosts
+              </DropdownItem>
+              <DropdownItem
+                key="speakers"
+                description="creators, pioneers, innovators, regulators, influencers and personalities"
+                startContent={icons.user}
+              >
+                Speakers
+              </DropdownItem>
+              <DropdownItem
+                key="production_ready"
+                description="all the venues in the world, including historical evaluations and scoring"
+                startContent={icons.scale}
+              >
+                Venues
+              </DropdownItem>
+              <DropdownItem
+                key="99_uptime"
+                description="sharing economy, including hotel sharing and so on"
+                startContent={icons.flash}
+              >
+                Share 2 Earn
+              </DropdownItem>
+              <DropdownItem
+                key="supreme_support"
+                description="Automatically generate cover images according to your prompts"
+                startContent={icons.camera}
+              >
+                AIGC Cover Image
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
         </NavbarContent>
+
+        {/* Menu End */}
 
         <NavbarContent
           className="hidden basis-1/5 sm:flex sm:basis-full"
@@ -86,16 +166,6 @@ export const TheNavbar = () => {
           <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
           <NavbarItem className="hidden md:flex">
             <MagicConnect />
-            {/*<Button*/}
-            {/*  isExternal*/}
-            {/*  as={Link}*/}
-            {/*  className="bg-default-100 text-sm font-normal text-default-600"*/}
-            {/*  href={siteConfig.links.twitter}*/}
-            {/*  startContent={<HeartFilledIcon className="text-danger" />}*/}
-            {/*  variant="flat"*/}
-            {/*>*/}
-            {/*  twitter2*/}
-            {/*</Button>*/}
           </NavbarItem>
         </NavbarContent>
 
