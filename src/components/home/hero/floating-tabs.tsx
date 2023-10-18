@@ -9,7 +9,7 @@ export const FloatingTabs: React.FC<{}> = () => {
       className=""
       classNames={{
         base: 'absolute left-[100px] -top-[160px] h-10 animate-[levitate_17s_ease_infinite_1s]',
-        tabList: 'max-w-[390px] shadow-sm',
+        tabList: 'max-w-[5000px] shadow-sm',
       }}
       radius="full"
       size="sm"

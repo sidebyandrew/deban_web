@@ -24,8 +24,9 @@ export const HomeHero = () => {
       <div className="relative z-20 flex w-full flex-col gap-6 lg:w-1/2 xl:mt-2">
         <div className="text-center leading-8 md:text-left md:leading-10">
           <div className="inline-block">
-            <h1 className={title()}>Web3&nbsp;</h1>
-            <h1 className={title({ color: 'violet' })}>Social Events&nbsp;</h1>
+            <h1 className={title({ color: 'violet' })}>
+              Social&nbsp;Events&nbsp;
+            </h1>
           </div>
           <h1 className={title()}>With Pleasure.</h1>
         </div>

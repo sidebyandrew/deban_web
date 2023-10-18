@@ -5,10 +5,8 @@ import {
   CardFooter,
   Image,
   Input,
-  Switch,
   Tooltip,
 } from '@nextui-org/react';
-import { MoonFilledIcon, SunFilledIcon } from '@nextui-org/shared-icons';
 import { useTheme } from 'next-themes';
 import NextImage from 'next/image';
 
@@ -33,19 +31,6 @@ export const FloatingComponents: React.FC<{}> = () => {
   return (
     <div className="relative z-20 hidden w-1/2 flex-col lg:flex">
       <>
-        <Switch
-          classNames={{
-            base: 'absolute -top-[220px] -right-[40px] animate-[levitate_13s_ease_infinite_1s_reverse]',
-            wrapper: 'shadow-sm',
-            startContent: 'text-white',
-          }}
-          endContent={<MoonFilledIcon />}
-          isSelected={isSelected}
-          size="lg"
-          startContent={<SunFilledIcon />}
-          onChange={onChange}
-        />
-
         <Input
           className="absolute -right-[120px] -top-[130px] w-[200px] animate-[levitate_10s_ease_infinite]"
           color="secondary"
