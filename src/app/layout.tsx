@@ -45,10 +45,10 @@ export default function RootLayout({
               <Link
                 isExternal
                 className="flex items-center gap-1 text-current"
-                href="deban.xyz"
-                title="deban.xyz homepage"
+                href="/"
+                title="homepage"
               >
-                <p className="text-primary">deban.xyz | Social Events</p>
+                <p className="text-secondary">Deban.xyz | Social Events With Pleasure.</p>
               </Link>
             </footer>
           </div>
