@@ -94,7 +94,7 @@ export default function TheNavbar() {
         <div className="hidden gap-4 sm:flex">
         <NavbarContent className="hidden gap-4 sm:flex" justify="end">
           <NavbarItem>
-            <Link color="foreground" href="#">
+            <Link color="foreground" href="/events">
               Events
             </Link>
           </NavbarItem>
