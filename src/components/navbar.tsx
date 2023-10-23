@@ -15,7 +15,16 @@ import {
 import { siteConfig } from '@/config/site';
 import NextLink from 'next/link';
 
-import { DebanLetterLogo, DebanLogo, SearchIcon } from '@/components/icons';
+import {
+  BankNotes,
+  Building2,
+  DebanLetterLogo,
+  DebanLogo,
+  Microphone,
+  Photo,
+  SearchIcon,
+  User2
+} from '@/components/icons';
 import { MagicConnect } from '@/components/magic/MagicConnect';
 import MagicProvider from '@/components/magic/MagicProvider';
 import { ThemeSwitch } from '@/components/theme-switch';
@@ -119,35 +128,35 @@ export default function TheNavbar() {
               <DropdownItem
                 key="hosts"
                 description="Browse and follow up top hosts with customized notification"
-                startContent={icons.activity}
+                startContent={<Microphone/>}
               >
                 Hosts
               </DropdownItem>
               <DropdownItem
                 key="speakers"
-                description="creators, pioneers, innovators, regulators, influencers and personalities"
-                startContent={icons.user}
+                description="Creators, pioneers, innovators, regulators, influencers and personalities"
+                startContent={<User2/>}
               >
                 Speakers
               </DropdownItem>
               <DropdownItem
                 key="production_ready"
-                description="all the venues in the world, including historical evaluations and scoring"
-                startContent={icons.scale}
+                description="All the venues in the world, including historical evaluations and scoring"
+                startContent={<Building2/>}
               >
                 Venues
               </DropdownItem>
               <DropdownItem
                 key="99_uptime"
-                description="sharing economy, including hotel sharing and so on"
-                startContent={icons.flash}
+                description="Sharing economy, including hotel sharing and so on"
+                startContent={<BankNotes/>}
               >
                 Share 2 Earn
               </DropdownItem>
               <DropdownItem
                 key="supreme_support"
                 description="Automatically generate cover images according to your prompts"
-                startContent={icons.camera}
+                startContent={<Photo/>}
               >
                 AIGC Cover Image
               </DropdownItem>
