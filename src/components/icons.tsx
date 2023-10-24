@@ -1,6 +1,5 @@
 'use client';
 import { IconSvgProps } from '@/types';
-import { useTheme } from 'next-themes';
 import * as React from 'react';
 
 export const DebanLogo: React.FC<IconSvgProps> = ({
@@ -9,9 +8,6 @@ export const DebanLogo: React.FC<IconSvgProps> = ({
   height,
   ...props
 }) => {
-  // const { theme } = useTheme();
-  // props.fill = theme === 'dark' ? 'white': 'black';
-
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -65,8 +61,6 @@ export const DebanLetterLogo: React.FC<IconSvgProps> = ({
   height,
   ...props
 }) => {
-  const { theme } = useTheme();
-  props.fill = theme === 'dark' ? 'white' : 'black';
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -40,20 +40,20 @@ const prisma = new PrismaClient()
 // use `prisma` in your application to read and write data in your DB
 ```
 
-# 2. prisma DB Push
+# 2. npx prisma db push
 
 将本地的 prisma/schema.prisma 变更，‘应用’到数据库中。
 
 npx prisma db push
 
-# prisma DB Pull
+# npx prisma db pull
 
 将直接修改[create | alter table]数据库的结果，同步到prisma/schema.prisma
 
 npx prisma db pull
 https://www.prisma.io/docs/getting-started/setup-prisma/add-to-existing-project/relational-databases/introspection-typescript-postgresql
 
-# prisma DB seed
+# npx prisma db seed
 
 根据 prisma/seed.ts 的代码执行CRUD去初始化数据库
 
