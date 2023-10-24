@@ -21,11 +21,6 @@ export default function App() {
             <CardBody>hackathon</CardBody>
           </Card>
         </Tab>
-        <Tab key="xSpace" title="X Space">
-          <Card>
-            <CardBody>Twitter Space</CardBody>
-          </Card>
-        </Tab>
       </Tabs>
     </div>
   );

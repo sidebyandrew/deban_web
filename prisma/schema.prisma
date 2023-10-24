@@ -8,13 +8,44 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
-model users {
-  id        Int      @id @default(autoincrement())
-  name      String
-  email     String   @unique
+
+model User {
+  id       Int      @id @default(autoincrement())
+  email    String   @unique
+  authType String
+  name     String?
   image     String
+  role     String
+  event    Event[]
+  profile  Profile?
   createdAt DateTime @default(now())
 }
+
+
+model Profile {
+  id     Int    @id @default(autoincrement())
+  bio    String
+  user   User   @relation(fields: [userId], references: [id])
+  userId Int    @unique
+}
+
+model Event {
+  id         Int        @id @default(autoincrement())
+  type            String
+  title           String
+  brief           String
+  description     String
+  coverImageStore String
+  coverImage      String
+  published  Boolean    @default(false)
+  startDate  DateTime   @db.Timestamptz(3)
+  endDate    DateTime   @db.Timestamptz(3)
+  createdAt  DateTime   @default(now()) @db.Timestamptz(3)
+  updatedAt  DateTime   @db.Timestamptz(3)
+  createdBy  User  @relation(fields: [creatorId], references: [id])
+  creatorId  Int
+}
+
 
 model Product {
   id          Int       @id @default(autoincrement())

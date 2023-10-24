@@ -23,7 +23,7 @@ import {
   Microphone,
   Photo,
   SearchIcon,
-  User2
+  User2,
 } from '@/components/icons';
 import { MagicConnect } from '@/components/magic/MagicConnect';
 import MagicProvider from '@/components/magic/MagicProvider';
@@ -92,77 +92,83 @@ export default function TheNavbar() {
 
         {/* Menu Start */}
         <div className="hidden gap-4 sm:flex">
-        <NavbarContent className="hidden gap-4 sm:flex" justify="end">
-          <NavbarItem>
-            <Link color="foreground" href="/events">
-              Events
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link color="foreground" href="#">
-              Calendars
-            </Link>
-          </NavbarItem>
-
-          <Dropdown>
+          <NavbarContent className="hidden gap-4 sm:flex" justify="end">
             <NavbarItem>
-              <DropdownTrigger>
-                <Button
-                  disableRipple
-                  className="bg-transparent p-0 data-[hover=true]:bg-transparent"
-                  endContent={icons.chevron}
-                  radius="sm"
-                  variant="light"
-                >
-                  Explore
-                </Button>
-              </DropdownTrigger>
+              <Link color="foreground" href="/events">
+                Events
+              </Link>
             </NavbarItem>
-            <DropdownMenu
-              aria-label="ACME features"
-              className="w-[340px]"
-              itemClasses={{
-                base: 'gap-4',
-              }}
-            >
-              <DropdownItem
-                key="hosts"
-                description="Browse and follow up top hosts with customized notification"
-                startContent={<Microphone/>}
+
+            <NavbarItem>
+              <Link color="foreground" href="#">
+                Calendars
+              </Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link color="foreground" href="/spaces">
+                Spaces
+              </Link>
+            </NavbarItem>
+
+            <Dropdown>
+              <NavbarItem>
+                <DropdownTrigger>
+                  <Button
+                    disableRipple
+                    className="bg-transparent p-0 data-[hover=true]:bg-transparent"
+                    endContent={icons.chevron}
+                    radius="sm"
+                    variant="light"
+                  >
+                    Explore
+                  </Button>
+                </DropdownTrigger>
+              </NavbarItem>
+              <DropdownMenu
+                aria-label="ACME features"
+                className="w-[340px]"
+                itemClasses={{
+                  base: 'gap-4',
+                }}
               >
-                Hosts
-              </DropdownItem>
-              <DropdownItem
-                key="speakers"
-                description="Creators, pioneers, innovators, regulators, influencers and personalities"
-                startContent={<User2/>}
-              >
-                Speakers
-              </DropdownItem>
-              <DropdownItem
-                key="production_ready"
-                description="All the venues in the world, including historical evaluations and scoring"
-                startContent={<Building2/>}
-              >
-                Venues
-              </DropdownItem>
-              <DropdownItem
-                key="99_uptime"
-                description="Sharing economy, including hotel sharing and so on"
-                startContent={<BankNotes/>}
-              >
-                Share 2 Earn
-              </DropdownItem>
-              <DropdownItem
-                key="supreme_support"
-                description="Automatically generate cover images according to your prompts"
-                startContent={<Photo/>}
-              >
-                AIGC Cover Image
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        </NavbarContent>
+                <DropdownItem
+                  key="hosts"
+                  description="Browse and follow up top hosts with customized notification"
+                  startContent={<Microphone />}
+                >
+                  Hosts
+                </DropdownItem>
+                <DropdownItem
+                  key="speakers"
+                  description="Creators, pioneers, innovators, regulators, influencers and personalities"
+                  startContent={<User2 />}
+                >
+                  Speakers
+                </DropdownItem>
+                <DropdownItem
+                  key="production_ready"
+                  description="All the venues in the world, including historical evaluations and scoring"
+                  startContent={<Building2 />}
+                >
+                  Venues
+                </DropdownItem>
+                <DropdownItem
+                  key="99_uptime"
+                  description="Sharing economy, including hotel sharing and so on"
+                  startContent={<BankNotes />}
+                >
+                  Share 2 Earn
+                </DropdownItem>
+                <DropdownItem
+                  key="supreme_support"
+                  description="Automatically generate cover images according to your prompts"
+                  startContent={<Photo />}
+                >
+                  AIGC Cover Image
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          </NavbarContent>
         </div>
         {/* Menu End */}
 
@@ -189,11 +195,7 @@ export default function TheNavbar() {
           <div className="mx-4 mt-2 flex flex-col gap-2">
             {siteConfig.navMenuItems.map((item, index) => (
               <NavbarMenuItem key={`${item}-${index}`}>
-                <Link
-                  color='foreground'
-                  href={item.href}
-                  size="lg"
-                >
+                <Link color="foreground" href={item.href} size="lg">
                   {item.label}
                 </Link>
               </NavbarMenuItem>
