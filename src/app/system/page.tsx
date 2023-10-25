@@ -1,5 +1,7 @@
 'use client';
+import { useIsMounted } from '@/hooks/use-is-mounted';
 import {
+  Button,
   Code,
   Table,
   TableBody,
@@ -11,20 +13,61 @@ import {
 
 import { useEffect, useState } from 'react';
 
-export default function Page() {
-  const timezoneOffset = -new Date().getTimezoneOffset() / 60;
-  console.info('timezoneOffset', timezoneOffset);
-  const timeZone = new Intl.DateTimeFormat().resolvedOptions().timeZone;
-  console.info(timeZone);
+function getDate() {
+  const today = new Date();
+  const month = today.getMonth() + 1;
+  const year = today.getFullYear();
+  const date = today.getDate();
+  const time = today.getTime();
+  // return `${year}- ${month} - ${date} ${time}  `;
+  return new Date().toLocaleString();
+}
 
-  let [timeZoneClient, setTimeZoneClient] = useState('');
+function getLocation(successCallback: PositionCallback) {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(successCallback);
+  } else {
+    console.error('Not support: navigator.geolocation ');
+  }
+}
+
+export default function Page() {
+  const isMounted = useIsMounted();
+  const [currentDate, setCurrentDate] = useState('');
+  const [location, setLocation] = useState('');
+  const serverTimeZone = new Intl.DateTimeFormat().resolvedOptions().timeZone;
 
   useEffect(() => {
-    setTimeZoneClient(new Intl.DateTimeFormat().resolvedOptions().timeZone);
+    let intervalId = setInterval(() => setCurrentDate(getDate()), 1000);
+    return () => {
+      clearInterval(intervalId);
+    };
   }, []);
+
+  function processOnClick() {
+    getLocation((x) => {
+      setLocation('' + x?.coords?.latitude);
+    });
+  }
 
   return (
     <div>
+      <div>
+        <Button color="primary" onClick={processOnClick}>
+          Get Location
+        </Button>
+        <div>latitude: {location && JSON.stringify(location)}</div>
+      </div>
+      <div> Current Time: {currentDate}</div>
+      <div>
+        timezoneOffset ={isMounted && -new Date().getTimezoneOffset() / 60}
+      </div>
+      <div>
+        Intl.timezone
+        {isMounted && new Intl.DateTimeFormat().resolvedOptions().timeZone}
+      </div>
+      <div>serverTimeZone = {isMounted && serverTimeZone}</div>
+
       <Table aria-label="Example static collection table">
         <TableHeader>
           <TableColumn>Key</TableColumn>
@@ -48,32 +91,66 @@ export default function Page() {
             <TableCell>
               <Code color="secondary">
                 const timezoneOffset = -new Date().getTimezoneOffset() / 60;
-                timezoneOffset = {timezoneOffset}
+                timezoneOffset =
+                {isMounted && -new Date().getTimezoneOffset() / 60}
               </Code>
               <Code color="secondary">getTimezoneOffset(): number;</Code>
-              <p>
+              <div>
                 {' '}
                 Gets the difference in minutes between the time on the local
                 computer and Universal Coordinated Time (UTC).
-              </p>
-              <p>
+              </div>
+              <div>
                 获取本地计算机上的时间与通用协调时间之间的分钟差。注意是用UTC减去本地时间，如果是正时区，则返回值为负数。
-              </p>
+              </div>
             </TableCell>
           </TableRow>
           <TableRow key="4">
             <TableCell>timezone</TableCell>
             <TableCell>
-              {' '}
-              {timeZone} timeZoneClient:{timeZoneClient}
+              Intl.DateTimeFormat().resolvedOptions().timeZone: ={' '}
+              {isMounted &&
+                new Intl.DateTimeFormat().resolvedOptions().timeZone}
             </TableCell>
           </TableRow>
 
           <TableRow key="5">
-            <TableCell>2个CST</TableCell>
+            <TableCell>4个CST</TableCell>
             <TableCell>
-              <p>1、China Standard Time ： UTC+8</p>
-              <p>2、Central Standard Time： UTC-6</p>
+              <div>1、China Standard Time ： UTC+8</div>
+              <div>2、Central Standard Time： UTC-6</div>
+              <div>3、Central Standard Time（澳洲）</div>
+              <div>Cuba Standard Time： 古巴</div>
+            </TableCell>
+          </TableRow>
+
+          <TableRow key="6">
+            <TableCell>
+              timestamp(aka{' '}
+              <a href="https://en.wikipedia.org/wiki/Unix_time">Unix time</a> )
+            </TableCell>
+            <TableCell>
+              为了方便时间的存储、比较和传输，可以使用时间戳来处理时间。时间戳是Unix
+              时间目前定义为自 1970 年 1 月 1 日星期四 00:00:00UTC
+              以来经过的非闰秒数。
+              <Code>Date.now()</Code>
+              <Code>new Date().getTime()</Code>
+              <Code>JS的时间戳单位是毫秒，13位的整数，如1698197289</Code>
+              <Code>
+                也有些单位是秒，10位的整数，如1698197，将在2287年升级到11位
+              </Code>
+            </TableCell>
+          </TableRow>
+
+          <TableRow key="7">
+            <TableCell>new Date()是知道当前环境时区的</TableCell>
+            <TableCell>
+              <Code>new Date(1970-01-01T01:00:00Z)</Code>
+              <Code>
+                Thu Jan 01 1970 09:00:00 GMT+0800 (Central Standard Time)
+              </Code>
+              上面有个错误，实际上应该是China Standard Time，而不是Central
+              Standard Time
             </TableCell>
           </TableRow>
         </TableBody>

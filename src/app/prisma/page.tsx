@@ -15,7 +15,7 @@ export default function Home() {
         href="https://vercel.com/templates/next.js/postgres-prisma"
         className="group mt-20 flex space-x-1 rounded-full bg-white/30 px-10 py-2 text-sm font-medium text-gray-600 shadow-sm ring-1 ring-gray-900/5 transition-all hover:shadow-lg active:shadow-sm sm:mt-0"
       >
-        <p>Deploy your own to Vercel</p>
+        <div>Deploy your own to Vercel</div>
         <ExpandingArrow />
       </Link>
       <h1 className="bg-gradient-to-br from-black via-[#171717] to-[#575757] bg-clip-text pb-8 pt-4 text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">

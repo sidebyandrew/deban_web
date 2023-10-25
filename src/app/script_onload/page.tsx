@@ -35,7 +35,7 @@ export default function ScriptOnload() {
       <main>
         <h1>Executing code after loading</h1>
         <div>
-          <p>Stripe methods: </p>
+          <div>Stripe methods: </div>
           <ul>
             {methods.map(([method]) => (
               <li key={method}>{method}</li>
