@@ -11,6 +11,7 @@ import {
   TableRow,
 } from '@nextui-org/react';
 
+import { useIsSSR } from '@react-aria/ssr';
 import { useEffect, useState } from 'react';
 
 function getDate() {
@@ -32,6 +33,8 @@ function getLocation(successCallback: PositionCallback) {
 }
 
 export default function Page() {
+  let isSSR = useIsSSR();
+
   const isMounted = useIsMounted();
   const [currentDate, setCurrentDate] = useState('');
   const [location, setLocation] = useState('');
@@ -39,6 +42,8 @@ export default function Page() {
 
   useEffect(() => {
     let intervalId = setInterval(() => setCurrentDate(getDate()), 1000);
+
+    processOnClick();
     return () => {
       clearInterval(intervalId);
     };
@@ -52,6 +57,7 @@ export default function Page() {
 
   return (
     <div>
+      <div>{isSSR ? 'isSSR：Server' : 'isSSR：Client'}</div>
       <div>
         <Button color="primary" onClick={processOnClick}>
           Get Location

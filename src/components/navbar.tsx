@@ -15,6 +15,7 @@ import {
 import { siteConfig } from '@/config/site';
 import NextLink from 'next/link';
 
+import I18NSwitch from '@/components/i18n-switch';
 import {
   BankNotes,
   Building2,
@@ -178,6 +179,7 @@ export default function TheNavbar() {
         >
           <NavbarItem className="hidden gap-2 sm:flex">
             <ThemeSwitch />
+            <I18NSwitch />
           </NavbarItem>
           <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
           <NavbarItem className="hidden md:flex">

@@ -51,11 +51,11 @@ export const MagicConnect = () => {
   } else {
     return (
       <Avatar
-        onClick={disconnect}
+        // onClick={disconnect}
         icon={<AvatarIcon />}
         classNames={{
           base: 'bg-gradient-to-br from-[#00B4FF] to-[#FF7000]',
-          icon: 'text-black/80',
+          icon: 'text-black/80 cursor-pointer',
         }}
       />
     );
