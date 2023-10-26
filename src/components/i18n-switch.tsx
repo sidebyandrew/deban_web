@@ -17,12 +17,15 @@ export default function I18NSwitch() {
   let isSSR = useIsSSR();
   const [currentDate, setCurrentDate] = useState('');
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const serverTimeZone = new Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const timeZone = new Intl.DateTimeFormat().resolvedOptions().timeZone;
   let offset = -new Date().getTimezoneOffset() / 60;
-  let utc = offset > 0 ? "+" + offset : "" + offset;
+  let utc = offset > 0 ? '+' + offset : '' + offset;
 
   useEffect(() => {
-    let intervalId = setInterval(() => setCurrentDate(new Date().toLocaleString()), 1000);
+    let intervalId = setInterval(
+      () => setCurrentDate(new Date().toLocaleString()),
+      1000
+    );
     return () => {
       clearInterval(intervalId);
     };
@@ -43,31 +46,13 @@ export default function I18NSwitch() {
               <ModalBody>
                 <p>
                   <div> Current Time: {currentDate}</div>
-                  <div> Server Timezone: {serverTimeZone}</div>
-                  {!isSSR&&<div> Timezone: {new Intl.DateTimeFormat().resolvedOptions().timeZone}</div>}
-                  {!isSSR&&<div> UTC:  { utc }</div>}
-
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam pulvinar risus non risus hendrerit venenatis.
-                  Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                </p>
-                <p>
-                  Magna exercitation reprehenderit magna aute tempor cupidatat
-                  consequat elit dolor adipisicing. Mollit dolor eiusmod sunt ex
-                  incididunt cillum quis. Velit duis sit officia eiusmod Lorem
-                  aliqua enim laboris do dolor eiusmod. Et mollit incididunt
-                  nisi consectetur esse laborum eiusmod pariatur proident Lorem
-                  eiusmod et. Culpa deserunt nostrud ad veniam.
+                  {!isSSR && <div>Timezone: {timeZone}</div>}
+                  {!isSSR && <div> UTC: {utc}</div>}
                 </p>
               </ModalBody>
               <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
+                <Button variant={'flat'} onPress={onClose}>
                   Close
-                </Button>
-                <Button color="primary" onPress={onClose}>
-                  Action
                 </Button>
               </ModalFooter>
             </>
