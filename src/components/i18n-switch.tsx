@@ -18,6 +18,8 @@ export default function I18NSwitch() {
   const [currentDate, setCurrentDate] = useState('');
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const serverTimeZone = new Intl.DateTimeFormat().resolvedOptions().timeZone;
+  let offset = -new Date().getTimezoneOffset() / 60;
+  let utc = offset > 0 ? "+" + offset : "" + offset;
 
   useEffect(() => {
     let intervalId = setInterval(() => setCurrentDate(new Date().toLocaleString()), 1000);
@@ -43,7 +45,7 @@ export default function I18NSwitch() {
                   <div> Current Time: {currentDate}</div>
                   <div> Server Timezone: {serverTimeZone}</div>
                   {!isSSR&&<div> Timezone: {new Intl.DateTimeFormat().resolvedOptions().timeZone}</div>}
-                  {!isSSR&&<div> UTC:  {  -new Date().getTimezoneOffset() / 60 }</div>}
+                  {!isSSR&&<div> UTC:  { utc }</div>}
 
                 </p>
                 <p>
