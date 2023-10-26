@@ -43,6 +43,7 @@ export default function I18NSwitch() {
                   <div> Current Time: {currentDate}</div>
                   <div> Server Timezone: {serverTimeZone}</div>
                   {!isSSR&&<div> Timezone: {new Intl.DateTimeFormat().resolvedOptions().timeZone}</div>}
+                  {!isSSR&&<div> UTC:  {  -new Date().getTimezoneOffset() / 60 }</div>}
 
                 </p>
                 <p>
