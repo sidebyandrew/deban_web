@@ -1,6 +1,8 @@
 import { match } from '@formatjs/intl-localematcher';
+import { getIronSession } from 'iron-session/edge';
 import Negotiator from 'negotiator';
 import type { NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
 
 let headers = { 'accept-language': 'en-US,en;q=0.5' };
 let languages = new Negotiator({ headers }).languages();
@@ -12,20 +14,19 @@ function getLocale(request: NextRequest) {
 }
 
 // This function can be marked `async` if using `await` inside
-export function middleware(request: NextRequest) {
-  let { pathname } = request.nextUrl;
+export async function middleware(request: NextRequest) {
+  let res = NextResponse.next();
+  let { debanSession } = await getIronSession(request, res, {
+    cookieName: '' + process.env.COOKIE_NAME_APP,
+    password: '' + process.env.COOKIE_SECRET_PWD,
+    cookieOptions: {
+      secure: process.env.NODE_ENV === 'production',
+    },
+  });
 
-  let pathnameHasLocale = locales.some(
-    (local) => pathname.startsWith(`/${local}/`) || pathname === `/${local}`
-  );
+  // do anything with session here:
 
-  if (pathnameHasLocale) return;
-  let locale = getLocale(request);
-  // e.g. incoming request is /products
-  // The new URL is now /en-US/products
-  request.nextUrl.pathname = `/${locale}${pathname}`;
-
-  return Response.redirect(request.nextUrl);
+  return res;
 }
 
 // See "Matching Paths" below to learn more
