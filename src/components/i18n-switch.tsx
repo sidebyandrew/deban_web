@@ -49,6 +49,9 @@ export default function I18NSwitch() {
                   {!isSSR && <div>Timezone: {timeZone}</div>}
                   {!isSSR && <div> UTC: {utc}</div>}
                 </p>
+                <Button variant="solid" aria-label="i8n" onPress={onOpen}>
+                  切换为中文
+                </Button>
               </ModalBody>
               <ModalFooter>
                 <Button variant={'flat'} onPress={onClose}>

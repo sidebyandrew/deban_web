@@ -48,7 +48,9 @@ export default function RootLayout({
                 href="/"
                 title="homepage"
               >
-                <p className="text-secondary">Deban.xyz | Social Events With Pleasure.</p>
+                <p className="text-secondary">
+                  Deban.xyz | Social Events With Pleasure.
+                </p>
               </Link>
             </footer>
           </div>
