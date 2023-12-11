@@ -1,3 +1,4 @@
+'use client';
 import BadgeInfo from '@/components/icon/badgeInfo';
 import BadgeVerified from '@/components/icon/badgeVerified';
 import IconCalendar from '@/components/icon/calendar';
